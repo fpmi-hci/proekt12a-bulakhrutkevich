@@ -1,9 +1,9 @@
 ## Project Name: <br>
-BulakhRutkevichKozunov. <br>
+Roast Beef. <br>
 ## Description: <br>
-Wonderful IT project for everyone. <br>
+Social network for cooking lovers. <br>
 ## Installation: <br>
-Download and click install. <br>
+You just need to access the website. <br>
 ## Sub modules: <br>
 www.link.com. <br>
 ## Usage:
