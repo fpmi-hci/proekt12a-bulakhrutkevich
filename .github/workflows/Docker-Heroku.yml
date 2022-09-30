@@ -26,7 +26,7 @@ jobs:
           DOCKERFILE_DIRECTORY: "."
           HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          DOCKERFILE_NAME: "Dockerfile"
+          DOCKERFILE_NAME: "Dockerfile-heroku"
           DOCKER_OPTIONS: "--no-cache"
         run: |
           cd ${DOCKERFILE_DIRECTORY}
