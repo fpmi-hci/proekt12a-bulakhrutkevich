@@ -1,7 +1,7 @@
 ## Project Name: <br>
 Roast Beef. <br>
 ## Description: <br>
-Social network for cooking lovers. <br>
+Social network for cooking lovers. Alexey Kozunov. Alexexy Kozunov <br>
 ## Installation: <br>
 You just need to access the website. <br>
 ## Sub modules: <br>
