@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'roast_beef.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_NAME'),
-        'USER': os.environ.get('POSTGRES_USER'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': 'db',
+        'NAME': 'dcaqtnfi03ft2s',
+        'USER': 'xgpkesvvmigvut',
+        'PASSWORD': '5c76821fbc73450fa27a2217f5f83ea33f814ff237143c2e5851389323e1c26e',
+        'HOST': 'ec2-54-228-218-84.eu-west-1.compute.amazonaws.com',
         'PORT': 5432,
     }
 }
