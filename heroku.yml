@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile-heroku
+    web: Dockerfile
 run:
   web: python /code/manage.py runserver 0.0.0.0:$PORT
