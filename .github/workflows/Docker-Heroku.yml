@@ -19,13 +19,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
-        id: heroku
-        uses: fpmi-hci/proekt12a-bulakhrutkevich@main  # use the latest version of the action
-        with:
-          email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
-          api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
-          app_name: ${{ secrets.HEROKU_APP_NAME }} # you aplication name
-          docker_compose_file: 'docker-compose.yml'
-          options: '' # Docker Build Options
+      
+      - name: Build and push Docker to Heroku
+        env:
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+          DOCKERFILE_DIRECTORY: "."
+          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          DOCKERFILE_NAME: "docker-compose.yaml"
+          DOCKER_OPTIONS: "--no-cache"
+        run: |
+          cd ${DOCKERFILE_DIRECTORY}
+          echo ${HEROKU_API_KEY} | docker login \
+            --username=${HEROKU_EMAIL} \
+            registry.heroku.com \
+            --password-stdin
+          docker-compose \
+            --file ${DOCKERFILE_NAME} \
+            ${DOCKER_OPTIONS} \
+            --tag registry.heroku.com/${HEROKU_APP_NAME}/web .
+          heroku container:push web --app ${HEROKU_APP_NAME}
+          heroku container:release web --app ${HEROKU_APP_NAME}
