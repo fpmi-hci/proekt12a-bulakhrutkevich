@@ -24,8 +24,8 @@ jobs:
         id: heroku
         uses: fpmi-hci/proekt12a-bulakhrutkevich@v1.0.0  # use the latest version of the action
         with:
-          email: ${{ secrets.alexekozunov@gmail.com }} # your heroku email
-          api_key: ${{ secrets.90b36ca7-c33d-49ea-9555-1110e95a325a }} # your  heroku api key
-          app_name: ${{ secrets.roast-beef }} # you aplication name
+          email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
+          api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
+          app_name: ${{ secrets.HEROKU_APP_NAME }} # you aplication name
           docker_compose_file: 'docker-compose.yml'
           options: '' # Docker Build Options
