@@ -9,4 +9,4 @@ www.link.com. <br>
 ## Usage:
 Just enjoy. <br>
 ## Contributing:
-Artsiom Bulakh, Rodion Rutkevich, Alexey Kozunov. <br>
+Artsiom Bulakh, Rodion Rutkevich, Alexey Kozunoddddv. <br>
